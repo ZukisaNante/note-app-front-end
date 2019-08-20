@@ -15,5 +15,5 @@
 > - CSS
 ---
 ## LICENSE
-> MIT License
+> MIT License (see license file)
 
