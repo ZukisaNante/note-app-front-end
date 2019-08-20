@@ -14,4 +14,6 @@
 > - HTML
 > - CSS
 ---
+## LICENSE
+> MIT License
 
