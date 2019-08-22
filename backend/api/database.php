@@ -11,9 +11,9 @@
 
     // Declare Variables
     define('DB_HOST', 'localhost');
-    define('DB_USER', 'admin');
-    define('DB_PASS', 'S8RJ7DYvrxIF');
-    define('DB_NAME', 'notes_api');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_NAME', 'notes_db');
 
     // Database Connection
     function connect()
