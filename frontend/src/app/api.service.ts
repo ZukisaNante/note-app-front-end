@@ -1,22 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { notes } from  './notes.ts';
+import { Notes } from  '../notes';
 import { Observable } from  'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ApiService {
+ @Injectable({
+   providedIn: 'root',
+ })
 
-  constructor(private httpClient: HttpClient) {}
-}
-
-export class ApiService {
+export  class ApiService {
   PHP_API_SERVER = "http://127.0.0.1:8080";
   }
-  readNotes(): Observable<Notes[]>{
+   readNotes(): Observable<Notes[]>{
     return this.httpClient.get<Notes[]>(`${this.PHP_API_SERVER}/api/read.php`);
-  }
+  } 
 
    createNotes(my_notes: Notes): Observable<Notes>{
     return this.httpClient.post<Notes>(`${this.PHP_API_SERVER}/api/create.php`, my_notes);

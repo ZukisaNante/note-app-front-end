@@ -1,4 +1,4 @@
-export  class  Notes {
+export class  Notes {
     id: number;
     title:  title;
     notes:  notes;

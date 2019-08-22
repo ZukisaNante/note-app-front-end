@@ -4,11 +4,28 @@
   <meta charset="utf-8">
   <title>Frontend</title>
   <base href="/">
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+var app = angular.module("myShoppingList", []); 
+app.controller("myCtrl", function($scope) {
+    $scope.products = ["Milk", "Bread", "Cheese"];
+    $scope.addItem = function () {
+        $scope.products.push($scope.addMe);
+    }    
+});
+</script>
+
+<div ng-app="myShoppingList" ng-controller="myCtrl">
+  <ul>
+    <li ng-repeat="x in products">{{x}}</li>
+  </ul>
+  <input ng-model="addMe">
+  <button ng-click="addItem()">Add</button>
+</div>
 </body>
 </html>

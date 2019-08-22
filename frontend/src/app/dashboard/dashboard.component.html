@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<h1>Notes</h1>
+<div>
+
+  <table border='1' width='100%' style='border-collapse: collapse;'>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Notes</th>
+      <th>Author</th>
+
+    </tr>
+
+    <tr *ngFor="let note of notes">
+      <td>{{ notes.id }}</td>
+      <td>{{ notes.title }}</td>
+      <td>{{ notes.notes }}</td>
+      <td>{{ notes.author }}</td>
+      <td>
+        <button (click)="deleteNotes(notes.id)">Delete</button>
+        <button (click)="selectNotes(notes)">Update</button>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <form #f = "ngForm">
+    <label>Title</label>
+    <input type="text" name="title" [(ngModel)] = "selectedNotes.title">
+    <br>
+    <label>Notes</label>
+    <input type="text" name="notes" [(ngModel)] = "selectedNotes.notes">
+    <br>
+    <input type="text" name="author" [(ngModel)] = "selectedAuthor.author">
+    <br>
+    <input type="button" (click)="createOrUpdateNotes(f)" value="Create or Update Notes">
+  </form>
+
+  
+
