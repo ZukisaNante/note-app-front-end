@@ -1,7 +1,49 @@
 <?php
-require 'database.php';
+//require '../backend/api/database.php';
+// Declare Variables
+$servername = "localhost";
+$username = "admin";
+$password = "S8RJ7DYvrxIF";
+$dbname = "notes_api";
 
-// Get the posted data.
+// Create connection
+/* $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO my_notes (title, notes, author) VALUES ('$title','$notes','$author')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close(); */
+
+
+
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+$info = json_decode(file_get_contents("php://input"));
+if(count($request) > 0){
+  $title = mysqli_real_escape_string($conn, $info->title));
+  $notes = mysqli_real_escape_string($conn, $info->notes));
+  $author = mysqli_real_escape_string($conn, $info->author));
+  $sql = "INSERT INTO my_notes (title, notes, author) VALUES ('$title','$notes','$author')";
+  if(mysqli_query($conn, $sql)){
+    echo "Inserted Successfully";
+  }
+  else{
+    echo "Failed!";
+  }
+}
+$conn->close();
+
+/* // Get the posted data.
 $postdata = file_get_contents("php://input");
 
 if(isset($postdata) && !empty($postdata))
@@ -40,5 +82,5 @@ if(isset($postdata) && !empty($postdata))
   else
   {
     http_response_code(422);
-  }
-}?>
+  } */
+?>

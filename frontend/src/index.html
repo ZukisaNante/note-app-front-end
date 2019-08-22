@@ -4,28 +4,40 @@
   <meta charset="utf-8">
   <title>Frontend</title>
   <base href="/">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
   <app-root></app-root>
+  <div class = "container">
+    <h1 align = "center" >Add Notes Here</h1>
+  <div ng-app="notes_insert" ng-controller="controller">
+  <label>Title</label><input type="text" name="title" ng-model="title" class="form-control"><br/>
+  <label>Notes</label><input type="text" name="notes" ng-model="notes" class="form-control"><br/>
+  <label>Title</label><input type="text" name="author" ng-model="author" class="form-control"><br/> 
+  <input type="submit" name="insert" class="btn btn-success" ng-click="insert()" value="Insert"> 
+  </div>  
+  </div>
   <script>
-var app = angular.module("myShoppingList", []); 
-app.controller("myCtrl", function($scope) {
-    $scope.products = ["Milk", "Bread", "Cheese"];
-    $scope.addItem = function () {
-        $scope.products.push($scope.addMe);
-    }    
-});
-</script>
+    var app = angular.module("notes_insert",[]);
+    app.controller("controller", function($scope, $http){
+      $scope.insert = function(){
+        $http.post(
+          "../backend/api/create.php",
+          {'title':$scope.title, 'notes':$scope.notes, 'author':$scope.author}
+        ).success(function(data){
+          alert(data);
+          $scope.title = null;
+          $scope.notes = null;
+          $scope.author = null;
+        });
+      }
+    });
+  </script>
+  
 
-<div ng-app="myShoppingList" ng-controller="myCtrl">
-  <ul>
-    <li ng-repeat="x in products">{{x}}</li>
-  </ul>
-  <input ng-model="addMe">
-  <button ng-click="addItem()">Add</button>
-</div>
 </body>
 </html>
