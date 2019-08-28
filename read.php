@@ -1,6 +1,9 @@
 <?php
+/*
+ * Returns the list of notes.
+ */
 require 'database.php';
-$query = "SELECT * FROM my_notes ORDER BY id";
+$query = "SELECT * FROM my_notes ORDER BY id DESC"; // DESC -> descending order
 $statement = $connect->prepare($query);
 if($statement->execute())
 {
@@ -10,4 +13,5 @@ if($statement->execute())
   }
   echo json_encode($data);
 }
+
 ?>
