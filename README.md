@@ -18,9 +18,10 @@ http://zukisanante.freeoda.com/index.html
 > - MySQL
 > - HTML
 > - CSS
+> - Bootstrap 4
 ---
 ## MIT LICENSE 
-> Copyright (c) 2019 ZukisaNante
+> - Copyright (c) 2019 ZukisaNante
  
 ---
 ## SPECIAL THANKS AND COPYRIGHTS
