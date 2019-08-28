@@ -1,9 +1,9 @@
 # note-app-front-end
 ---
-https://zukisanante.github.io/note-app-front-end/index.html
+> - https://zukisanante.github.io/note-app-front-end/index.html
 > - The above link won't show any records as there is no database created at the moment online/on github.
 > - Therefore you can test or see the funtionality in the following link:
-http://zukisanante.freeoda.com/index.html
+> - http://zukisanante.freeoda.com/index.html
 
 ## Use PHP MySQL Database To Create a CRUD API using Angular JS 
 ---
