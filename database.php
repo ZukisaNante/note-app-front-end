@@ -16,6 +16,6 @@
     define('DB_NAME', 'notes_db');
 
     // Database Connection
-    $connect = new PDO("mysql:host=localhost;dbname=24843", "24843", "zukisa31");
+    $connect = new PDO("mysql:host=localhost;dbname=notes_db", "root", "");
 
 ?>

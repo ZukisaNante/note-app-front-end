@@ -81,7 +81,7 @@ app.controller('liveController', function($scope, $http){
     };
 
     $scope.fetchData = function(){
-        $http.get('read.php').success(function(data){
+        $http.get('http://localhost/angular_testing/read.php').success(function(data){
             $scope.namesData = data;
         });
     };
@@ -89,7 +89,7 @@ app.controller('liveController', function($scope, $http){
     $scope.insertData = function(){
         $http({
             method:"POST",
-            url:"http://zukisanante.freeoda.com/index.php",
+            url:"insert.php",
             data:$scope.addData,
         }).success(function(data){
             $scope.success = true;
