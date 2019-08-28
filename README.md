@@ -24,7 +24,7 @@ http://zukisanante.freeoda.com/index.html
  
 ---
 ## SPECIAL THANKS AND COPYRIGHTS
-> Copyright © 2019 Webslesson
-> Copyright 1999-2019 by Refsnes Data. All Rights Reserved. Powered by W3.CSS.
+> - Copyright © 2019 Webslesson
+> - Copyright 1999-2019 by Refsnes Data. All Rights Reserved. Powered by W3.CSS.
 
 
