@@ -19,8 +19,9 @@ http://zukisanante.freeoda.com/index.html
 > - HTML
 > - CSS
 ---
-## LICENSE
-> MIT License (see license file)
+## MIT LICENSE 
+> Copyright (c) 2019 ZukisaNante
+ 
 ---
 ## SPECIAL THANKS TO WEBLESSON
 > Copyright © 2019 Webslesson
