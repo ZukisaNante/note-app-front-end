@@ -89,7 +89,7 @@ app.controller('liveController', function($scope, $http){
     $scope.insertData = function(){
         $http({
             method:"POST",
-            url:"insert.php",
+            url:"http://zukisanante.freeoda.com/index.php",
             data:$scope.addData,
         }).success(function(data){
             $scope.success = true;
