@@ -21,4 +21,8 @@ http://zukisanante.freeoda.com/index.html
 ---
 ## LICENSE
 > MIT License (see license file)
+---
+## SPECIAL THANKS TO WEBLESSON
+> Copyright © 2019 Webslesson
+
 
