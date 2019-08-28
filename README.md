@@ -1,4 +1,4 @@
-https://zukisanante.github.io/note-app-front-end/
+https://zukisanante.github.io/note-app-front-end/index.php
 
 # note-app-front-end
 ---
