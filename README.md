@@ -1,7 +1,7 @@
 # note-app-front-end
 ---
 > - https://zukisanante.github.io/note-app-front-end/index.html
-> - The above link won't show any records as there is no PHP database won't work on github.
+> - The above link won't show any records as there is no PHP database work on github.
 > - Therefore you can test or see the funtionality in the following link:
 > - http://zukisanante.freeoda.com/index.html
 
